@@ -1,10 +1,13 @@
 package entities;
 
 public class Product {
-	public String name;
-	public double price;
-	public int quantity;
 	
+	// Variaveis Privadas (Encapsuladas)
+	private String name;
+	private double price;
+	private int quantity;
+	
+	// Realizado sobrecarga de construtures
 	public Product() {
 		
 	}
@@ -20,6 +23,32 @@ public class Product {
 		this.price = price;
 	}
 	
+	// Criado os metodos getters e setters para acesso das variaveis privadas
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public double getPrice() {
+		return price;
+	}
+
+	public void setPrice(double price) {
+		this.price = price;
+	}
+
+	public int getQuantity() {
+		return quantity;
+	}
+
+	public void setQuantity(int quantity) {
+		this.quantity = quantity;
+	}
+	
+	// Metodos da class
 	public double totalValueInStock() {
 		return quantity * price;
 	}
