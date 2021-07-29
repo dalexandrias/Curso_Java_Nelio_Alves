@@ -42,7 +42,7 @@ public class App {
             employeesList.add(new SalaryOption(id, name, salary));
         }
 
-        System.out.println("Enter the employee id that will have salary increase: ");
+        System.out.println("\nEnter the employee id that will have salary increase: ");
         id = sc.nextInt();
 
         int hasIdSalary = hasId(employeesList, id);
@@ -50,13 +50,13 @@ public class App {
             System.out.println("This id does nor exist!");
         }
         else{
-            System.out.println("Enter the percentage: ");
+            System.out.println("\nEnter the percentage: ");
             percentage = sc.nextDouble();
 
             employeesList.get(hasIdSalary).incrementSalary(percentage);
         }
 
-        System.out.println("List of employees:");
+        System.out.println("\nList of employees:");
         for (SalaryOption employee : employeesList){
             System.out.println(employee);
         }
